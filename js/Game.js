@@ -55,7 +55,7 @@ class Game {
       var index = 0;
 
       //x and y position of the cars
-      var x = 175 ;
+      var x = 200 ;
       var y;
 
       for(var plr in allPlayers){
@@ -70,6 +70,9 @@ class Game {
         cars[index-1].y = y;
 
         if (index === player.index){
+          strokeWeight(10);
+          fill("blue");
+          ellipse(x,y,80,80);
           cars[index - 1].shapeColor = "red";
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y;
